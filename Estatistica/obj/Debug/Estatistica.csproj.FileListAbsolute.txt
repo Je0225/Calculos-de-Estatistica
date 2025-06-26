@@ -18,3 +18,13 @@ C:\Users\User\Documents\Sources\CSharp\Estatistica\Estatistica\obj\Debug\Estatis
 C:\Users\User\Documents\Sources\CSharp\Estatistica\Estatistica\obj\Debug\Estatistica.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\Sources\CSharp\Estatistica\Estatistica\obj\Debug\Estatistica.exe
 C:\Users\User\Documents\Sources\CSharp\Estatistica\Estatistica\obj\Debug\Estatistica.pdb
+C:\Users\User\Documents\Sources\CSharp\CalculosEstatistica\Estatistica\bin\Debug\Estatistica.exe.config
+C:\Users\User\Documents\Sources\CSharp\CalculosEstatistica\Estatistica\bin\Debug\Estatistica.exe
+C:\Users\User\Documents\Sources\CSharp\CalculosEstatistica\Estatistica\bin\Debug\Estatistica.pdb
+C:\Users\User\Documents\Sources\CSharp\CalculosEstatistica\Estatistica\obj\Debug\Estatistica.csproj.AssemblyReference.cache
+C:\Users\User\Documents\Sources\CSharp\CalculosEstatistica\Estatistica\obj\Debug\Estatistica.FormPrincipal.resources
+C:\Users\User\Documents\Sources\CSharp\CalculosEstatistica\Estatistica\obj\Debug\Estatistica.Properties.Resources.resources
+C:\Users\User\Documents\Sources\CSharp\CalculosEstatistica\Estatistica\obj\Debug\Estatistica.csproj.GenerateResource.cache
+C:\Users\User\Documents\Sources\CSharp\CalculosEstatistica\Estatistica\obj\Debug\Estatistica.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Sources\CSharp\CalculosEstatistica\Estatistica\obj\Debug\Estatistica.exe
+C:\Users\User\Documents\Sources\CSharp\CalculosEstatistica\Estatistica\obj\Debug\Estatistica.pdb
