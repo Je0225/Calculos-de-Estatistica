@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\Sources\\CSharp\\CalculosEstatistica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{47EF42E4-D6C4-40D8-9733-DDDB086A9B8D}|Estatistica\\Estatistica.csproj|c:\\users\\user\\documents\\sources\\csharp\\calculosestatistica\\estatistica\\calculos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47EF42E4-D6C4-40D8-9733-DDDB086A9B8D}|Estatistica\\Estatistica.csproj|solutionrelative:estatistica\\calculos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{47EF42E4-D6C4-40D8-9733-DDDB086A9B8D}|Estatistica\\Estatistica.csproj|c:\\users\\user\\documents\\sources\\csharp\\calculosestatistica\\estatistica\\calculos\\calculomoda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47EF42E4-D6C4-40D8-9733-DDDB086A9B8D}|Estatistica\\Estatistica.csproj|solutionrelative:estatistica\\calculos\\calculomoda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47EF42E4-D6C4-40D8-9733-DDDB086A9B8D}|Estatistica\\Estatistica.csproj|c:\\users\\user\\documents\\sources\\csharp\\calculosestatistica\\estatistica\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47EF42E4-D6C4-40D8-9733-DDDB086A9B8D}|Estatistica\\Estatistica.csproj|solutionrelative:estatistica\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{47EF42E4-D6C4-40D8-9733-DDDB086A9B8D}|Estatistica\\Estatistica.csproj|c:\\users\\user\\documents\\sources\\csharp\\calculosestatistica\\estatistica\\calculos\\calculomodapearson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47EF42E4-D6C4-40D8-9733-DDDB086A9B8D}|Estatistica\\Estatistica.csproj|solutionrelative:estatistica\\calculos\\calculomodapearson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47EF42E4-D6C4-40D8-9733-DDDB086A9B8D}|Estatistica\\Estatistica.csproj|c:\\users\\user\\documents\\sources\\csharp\\calculosestatistica\\estatistica\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{47EF42E4-D6C4-40D8-9733-DDDB086A9B8D}|Estatistica\\Estatistica.csproj|solutionrelative:estatistica\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{47EF42E4-D6C4-40D8-9733-DDDB086A9B8D}|Estatistica\\Estatistica.csproj|c:\\users\\user\\documents\\sources\\csharp\\calculosestatistica\\estatistica\\calculos\\calculovariancia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47EF42E4-D6C4-40D8-9733-DDDB086A9B8D}|Estatistica\\Estatistica.csproj|solutionrelative:estatistica\\calculos\\calculovariancia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,40 +34,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormPrincipal.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\CalculosEstatistica\\Estatistica\\FormPrincipal.cs",
-              "RelativeDocumentMoniker": "Estatistica\\FormPrincipal.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\CalculosEstatistica\\Estatistica\\FormPrincipal.cs [Design]",
-              "RelativeToolTip": "Estatistica\\FormPrincipal.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "CalculoModa.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\CalculosEstatistica\\Estatistica\\Calculos\\CalculoModa.cs",
+              "RelativeDocumentMoniker": "Estatistica\\Calculos\\CalculoModa.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\CalculosEstatistica\\Estatistica\\Calculos\\CalculoModa.cs",
+              "RelativeToolTip": "Estatistica\\Calculos\\CalculoModa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T11:16:21.962Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormPrincipal.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\CalculosEstatistica\\Estatistica\\FormPrincipal.cs",
-              "RelativeDocumentMoniker": "Estatistica\\FormPrincipal.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\CalculosEstatistica\\Estatistica\\FormPrincipal.cs",
-              "RelativeToolTip": "Estatistica\\FormPrincipal.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAmwEIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T18:14:20.983Z",
+              "WhenOpened": "2025-11-12T14:33:00.297Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Calculos.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\CalculosEstatistica\\Estatistica\\Calculos.cs",
-              "RelativeDocumentMoniker": "Estatistica\\Calculos.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\CalculosEstatistica\\Estatistica\\Calculos.cs",
-              "RelativeToolTip": "Estatistica\\Calculos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CalculoModaPearson.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\CalculosEstatistica\\Estatistica\\Calculos\\CalculoModaPearson.cs",
+              "RelativeDocumentMoniker": "Estatistica\\Calculos\\CalculoModaPearson.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\CalculosEstatistica\\Estatistica\\Calculos\\CalculoModaPearson.cs",
+              "RelativeToolTip": "Estatistica\\Calculos\\CalculoModaPearson.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T20:28:18.853Z",
+              "WhenOpened": "2025-11-12T14:32:41.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CalculoVariancia.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\CalculosEstatistica\\Estatistica\\Calculos\\CalculoVariancia.cs",
+              "RelativeDocumentMoniker": "Estatistica\\Calculos\\CalculoVariancia.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\CalculosEstatistica\\Estatistica\\Calculos\\CalculoVariancia.cs",
+              "RelativeToolTip": "Estatistica\\Calculos\\CalculoVariancia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T14:29:55.997Z",
               "EditorCaption": ""
             }
           ]

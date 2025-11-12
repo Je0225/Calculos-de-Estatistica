@@ -46,13 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculos.cs" />
+    <Compile Include="Entidades\CalculadorDoForm.cs" />
+    <Compile Include="Calculos\CalculoDesvioPadrao.cs" />
+    <Compile Include="Calculos\CalculoMedia.cs" />
+    <Compile Include="Calculos\CalculoMediana.cs" />
+    <Compile Include="Calculos\CalculoModa.cs" />
+    <Compile Include="Calculos\CalculoModaPearson.cs" />
+    <Compile Include="Registry\CalculosRegistry.cs" />
+    <Compile Include="Calculos\CalculosValoresBase.cs" />
+    <Compile Include="Calculos\CalculoVariancia.cs" />
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Calculos\Contratos\ICalculoDouble.cs" />
+    <Compile Include="Calculos\Contratos\ICalculoString.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormPrincipal.resx">
@@ -80,5 +90,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

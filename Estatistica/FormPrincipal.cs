@@ -1,90 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
+using Estatistica.Entidades;
 
 namespace Estatistica {
 
   public partial class FormPrincipal : Form {
 
-    private List<Int32> numeros { get; set; }
+    private List<Int32> numeros { get; }
 
-    private Calculos Calculo { get; set; }
+    private CalculadorDoForm calculadorDoForm { get; set; }
 
     public FormPrincipal() {
       InitializeComponent();
-      numeros = new List<Int32>(); ;
+      numeros = new List<Int32>();
+      tbNumero.Select();
     }
 
-    private void AdicionarValor() {
-      if (!Int32.TryParse(tbNumero.Text.Trim(), out Int32 outroNumero)) {
-        MessageBox.Show(@" não é um valor válido, digite um número inteiro!");
-      } else {
-        Int32 numeroInformado = Convert.ToInt32(tbNumero.Text);
-        lvNumeros.Items.Add(new ListViewItem(new[] { numeroInformado.ToString() }) { Tag = numeroInformado });
-        numeros.Add(numeroInformado);
+    private void AddValorListasNumeros() {
+      if (!PodeAdicionarNumero()) {
+        return;
       }
+      Int32 numeroInformado = Convert.ToInt32(tbNumero.Text);
+      lvNumeros.Items.Add(new ListViewItem(new[] { numeroInformado.ToString() }));
+      numeros.Add(numeroInformado);
       tbNumero.Clear();
-      tbNumero.Focus();
+      tbNumero.Select();
     }
 
-    private void btnAdicionar_Click(object sender, EventArgs e) {
-      AdicionarValor();
-    }
-
-    private void btnGerarRol_Click(object sender, EventArgs e) {
-      if (numeros.Count == lvNumerosRol.Items.Count) {
-        MessageBox.Show(@"Já existe um rol para os números informados");
+    private void PopulaListasRol() {
+      if (!PodeGerarRol()) {
         return;
       }
-      Calculo = new Calculos(numeros);
+      calculadorDoForm = new CalculadorDoForm(numeros);
       lvNumerosRol.Items.Clear();
-      foreach (var numero in Calculo.NumerosOrdenados) {
-        lvNumerosRol.Items.Add(new ListViewItem(new[] { numero.ToString() }) { Tag = numero });
+      foreach (var numero in calculadorDoForm.Rol) {
+        lvNumerosRol.Items.Add(new ListViewItem(new[] { numero.ToString() }));
       }
     }
 
-    private void btnCalcular_Click(object sender, EventArgs e) {
-      if (Calculo.NumerosOrdenados.Count == 0 && numeros.Count > 0) {
-        MessageBox.Show(@"Clique no botão 'Gerar Rol' antes de calcular os valores");
+    private void Calcular() {
+      if (!PodeCalcular()) {
         return;
       }
-      if (numeros.Count == 0) {
-        MessageBox.Show(@"Não há valores para calcular, informe os números e clique em 'Gerar Rol' antes de calcular os valores");
-        return;
-      }
-      CalculaEPreecheLabels();
-      tbNumero.Focus();
+      PreecheCampos();
+      btnLimpar.Select();
     }
 
-    private void tbNumero_KeyDown(object sender, KeyEventArgs e) {
-      if (e.KeyCode == Keys.Enter) {
-        AdicionarValor();
-      }
+    private void PreecheCampos() {
+      lbMaiorNumeroResult.Text = calculadorDoForm.ValorMaximo.ToString();
+      lbMenorNumeroResult.Text = calculadorDoForm.ValorMinimo.ToString();
+      lbModaResult.Text = calculadorDoForm.Moda;
+      lbVarianciaResult.Text = calculadorDoForm.Variancia.ToString("F");
+      lbDesvioPadraoResult.Text = calculadorDoForm.DesvioPadrao.ToString("F");
+      lbModaPearsonResult.Text = calculadorDoForm.ModaDePearson.ToString("F");
+      lbMediaResult.Text = calculadorDoForm.Media.ToString("F");
+      lbMedianaResult.Text = calculadorDoForm.Mediana.ToString("F");
     }
 
-    private void tbNumero_KeyPress(object sender, KeyPressEventArgs e) {
-      e.Handled = !Char.IsDigit(e.KeyChar) &&
-          !e.KeyChar.Equals((Char)Keys.Back) &&
-          !e.KeyChar.Equals((Char)Keys.Enter);
-    }
-
-    private void CalculaEPreecheLabels() {
-      Calculos calculos = new Calculos(Calculo.NumerosOrdenados);
-
-      lbMaiorNumeroResult.Text = calculos.ValorMaximo.ToString();
-      lbMenorNumeroResult.Text = calculos.ValorMinimo.ToString();
-      lbModaResult.Text = calculos.CalculaModa();
-      lbVarianciaResult.Text = calculos.CalculaVariancia().ToString("F");
-      lbDesvioPadraoResult.Text = calculos.CalculaDesvioPadrao().ToString("F");
-      lbModaPearsonResult.Text = calculos.CalculaModaDePearson().ToString("F");
-      lbMediaResult.Text = calculos.CalculaMedia().ToString("F");
-      lbMedianaResult.Text = calculos.CalculaMediana().ToString("F");
-    }
-
-    private void btnLimpar_Click(object sender, EventArgs e) {
+    private void LimpaCampos() {
       numeros.Clear();
-      Calculo.NumerosOrdenados.Clear();
       lvNumeros.Items.Clear();
       lvNumerosRol.Items.Clear();
 
@@ -96,7 +71,66 @@ namespace Estatistica {
       lbModaPearsonResult.Text = "";
       lbMediaResult.Text = "";
       lbMedianaResult.Text = "";
+
+      tbNumero.Select();
     }
+
+    private Boolean PodeGerarRol() {
+      if (numeros.Count == lvNumerosRol.Items.Count) {
+        MessageBox.Show(@"Já existe um rol para os números informados");
+        return false;
+      }
+      return true;
+    }
+
+    private Boolean PodeCalcular() {
+      if (lvNumerosRol.Items.Count == 0 && numeros.Count > 0) {
+        MessageBox.Show(@"Clique no botão 'Gerar Rol' antes de calcular os valores");
+        return false;
+      }
+      if (numeros.Count == 0) {
+        MessageBox.Show(@"Não há valores para calcular, informe os números e clique em 'Gerar Rol' antes de calcular os valores");
+        return false;
+      }
+      return true;
+    }
+
+    private Boolean PodeAdicionarNumero() {
+      if (!Int32.TryParse(tbNumero.Text.Trim(), out Int32 outroNumero)) {
+        MessageBox.Show(@" não é um valor válido, digite um número inteiro!");
+        return false;
+      }
+      return true;
+    }
+
+    private void btnAdicionar_Click(Object sender, EventArgs e) {
+      AddValorListasNumeros();
+    }
+
+    private void btnGerarRol_Click(Object sender, EventArgs e) {
+      PopulaListasRol();
+    }
+
+    private void btnCalcular_Click(Object sender, EventArgs e) {
+      Calcular();
+    }
+
+    private void btnLimpar_Click(Object sender, EventArgs e) {
+      LimpaCampos();
+    }
+
+    private void tbNumero_KeyDown(Object sender, KeyEventArgs e) {
+      if (e.KeyCode == Keys.Enter) {
+        AddValorListasNumeros();
+      }
+    }
+
+    private void tbNumero_KeyPress(Object sender, KeyPressEventArgs e) {
+      e.Handled = !Char.IsDigit(e.KeyChar) &&
+          !e.KeyChar.Equals((Char)Keys.Back) &&
+          !e.KeyChar.Equals((Char)Keys.Enter);
+    }
+
   }
 
 }
